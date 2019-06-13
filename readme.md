@@ -41,12 +41,12 @@ Otrzymane wyniki dla metody trapezów (podział przedziału na 8 części):
 
 Wyniki analityczne otrzymane za pomocą narzędzia Wolfram Alpha.
 
-![alt text](https://github.com/Marwin34/fortran_homework_3/tree/master/res/poly.png "Analityczny wynik dla y(x) = x^2 + 2 * x + 1 wynoszący 8/3.")
+![alt text](https://github.com/Marwin34/fortran_homework_3/blob/master/res/poly.png "Analityczny wynik dla y(x) = x^2 + 2 * x + 1 wynoszący 8/3.")
 
 
-![alt text](https://github.com/Marwin34/fortran_homework_3/tree/master/res/cosine.png "Analityczny wynik dla y(x) = cos(x) wynoszący 2 * sin(1).")
+![alt text](https://github.com/Marwin34/fortran_homework_3/blob/master/res/cosine.png "Analityczny wynik dla y(x) = cos(x) wynoszący 2 * sin(1).")
  
-![alt text](https://github.com/Marwin34/fortran_homework_3/tree/master/res/exponential.png "Analityczny wynik dla y(x) = cos(x) wynszący e - 1/e.")
+![alt text](https://github.com/Marwin34/fortran_homework_3/blob/master/res/exponential.png "Analityczny wynik dla y(x) = cos(x) wynszący e - 1/e.")
 
 ## Wnioski
 Otrzymane wyniki nie odbiegają znacznie od tych wyznaczonych analitycznie, z tego wynika, że dla testowanych funkcji prezentowane metody całkowania dają dobre przybliżenie wyniku.
