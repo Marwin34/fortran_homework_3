@@ -1,0 +1,18 @@
+ Testing integration for:
+ y(x) = x^2 + 2*x + 1 and y(x) = cos(x) and y(x) = e^x
+ where x from -1.0 to 1.0
+ with rectangle rule.
+ Result for y = 2x^2 + 2*x + 1   2.65625000000000     
+ Result for y = cos(x)   1.68733263340509     
+ Result for y = e^x   2.34429268716435     
+ Testing integration for:
+ y(x) = x^2 + 2*x + 1 and y(x) = cos(x) and y(x) = e^x
+ where x from -1.0 to 1.0
+ with trapezoid rule.
+ Result for y = 2x^2 + 2*x + 1   2.68750000000000     
+ Result for y = cos(x)   1.67416750270445     
+ Result for y = e^x   2.36263133358521     
+ Expectations:
+ y(x) = x^2 + 2*x + 1   2.666700    
+ y(x) = cos(x)   1.682900    
+ and y(x) = e^x   2.350400    

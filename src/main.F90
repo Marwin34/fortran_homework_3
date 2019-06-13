@@ -21,11 +21,18 @@ program main
 
     p = 1
 
+    open(19, file='res/results', status='unknown')
+
     if(this_image() == 1) then
         write(*, *) "Testing integration for:"
         write(*, *) "y(x) = x^2 + 2*x + 1 and y(x) = cos(x) and y(x) = e^x"
         write(*, *) "where x from -1.0 to 1.0"
         write(*, *) "with rectangle rule."
+
+        write(19, *) "Testing integration for:"
+        write(19, *) "y(x) = x^2 + 2*x + 1 and y(x) = cos(x) and y(x) = e^x"
+        write(19, *) "where x from -1.0 to 1.0"
+        write(19, *) "with rectangle rule."
     end if
 
     my_fun => poly
@@ -51,6 +58,7 @@ program main
         end do
 
         write(*, *) "Result for y = 2x^2 + 2*x + 1", sum
+        write(19, *) "Result for y = 2x^2 + 2*x + 1", sum
 
         sum = 0.0
 
@@ -59,6 +67,7 @@ program main
         end do
 
         write(*, *) "Result for y = cos(x)", sum
+        write(19, *) "Result for y = cos(x)", sum
 
         sum = 0.0
 
@@ -67,6 +76,7 @@ program main
         end do
 
         write(*, *) "Result for y = e^x", sum
+        write(19, *) "Result for y = e^x", sum
     end if
 
     syncall()
@@ -76,6 +86,11 @@ program main
         write(*, *) "y(x) = x^2 + 2*x + 1 and y(x) = cos(x) and y(x) = e^x"
         write(*, *) "where x from -1.0 to 1.0"
         write(*, *) "with trapezoid rule."
+
+        write(19, *) "Testing integration for:"
+        write(19, *) "y(x) = x^2 + 2*x + 1 and y(x) = cos(x) and y(x) = e^x"
+        write(19, *) "where x from -1.0 to 1.0"
+        write(19, *) "with trapezoid rule."
     end if
 
     my_fun => poly
@@ -101,6 +116,7 @@ program main
         end do
 
         write(*, *) "Result for y = 2x^2 + 2*x + 1", sum
+        write(19, *) "Result for y = 2x^2 + 2*x + 1", sum
 
         sum = 0.0
 
@@ -109,6 +125,7 @@ program main
         end do
 
         write(*, *) "Result for y = cos(x)", sum
+        write(19, *) "Result for y = cos(x)", sum
 
         sum = 0.0
 
@@ -117,5 +134,21 @@ program main
         end do
 
         write(*, *) "Result for y = e^x", sum
+        write(19, *) "Result for y = e^x", sum
     end if
+
+    if(this_image() == 1) then
+        write(*, *) "Expectations:"
+        write(*, *) "y(x) = x^2 + 2*x + 1", 2.6667
+        write(*, *) "y(x) = cos(x)", 1.6829
+        write(*, *) "and y(x) = e^x", 2.3504
+
+        write(19, *) "Expectations:"
+        write(19, *) "y(x) = x^2 + 2*x + 1", 2.6667
+        write(19, *) "y(x) = cos(x)", 1.6829
+        write(19, *) "and y(x) = e^x", 2.3504
+    end if
+
+    close(19)
+
 end program
